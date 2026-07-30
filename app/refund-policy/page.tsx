@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/images/logo.svg"; // adjust if your path differs
+import logo from "../../public/Images/logo.svg"
 
 export default function RefundPolicy() {
   return (
