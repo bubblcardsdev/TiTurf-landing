@@ -2,34 +2,40 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronUp, ChevronDown, Monitor,Smartphone } from "lucide-react";
+import cricket from "../public/Images/cricket.svg";
+import football from "../public/Images/football.svg";
+import badminton from "../public/Images/batmin.svg";
+import jogging from "../public/Images/jogging.svg";
+import basketball from "../public/Images/basketball.svg";
 
 const games = [
   {
     name: "Cricket",
     subName: "Turf",
-    icon: "/images/cricket.svg",
+    icon: cricket,
   },
   {
     name: "Football",
     subName: "Court",
-    icon: "/images/football.svg",
+    icon: football,
   },
   {
     name: "Badminton",
     subName: "Court",
-    icon: "/images/batmin.svg",
+    icon: badminton,
   },
   {
     name: "Jogging",
     subName: "Track",
-    icon: "/images/jogging.svg",
+    icon: jogging,
   },
   {
     name: "Basketball",
     subName: "Court",
-    icon: "/images/basketball.svg",
+    icon: basketball,
   },
 ];
+
 interface HeroContentProps {
   currentGame: number;
   setCurrentGame: React.Dispatch<React.SetStateAction<number>>;

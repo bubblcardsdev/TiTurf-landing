@@ -5,40 +5,51 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import HeroContent from "@/components/HeroContent";
 import Footer from "@/components/Footer";
+import cricket from "../public/Images/cricket.svg";
+import football from "../public/Images/football.svg";
+import badminton from "../public/Images/batmin.svg";
+import jogging from "../public/Images/jogging.svg";
+import basketball from "../public/Images/basketball.svg";
+
+import cricketBg from "../public/Images/cricketBg.png";
+import footballBg from "../public/Images/footballBg.png";
+import badmintonBg from "../public/Images/badmintonImageBg.png";
+import joggingBg from "../public/Images/jogginBg.png";
+import basketballBg from "../public/Images/basketballBg.png";
+
 
 export const games = [
   {
     name: "Cricket",
     subName: "Turf",
-    icon: "/images/cricket.svg",
-    background: "/images/cricketBg.png",
+    icon: cricket,
+    background: cricketBg,
   },
   {
     name: "Football",
     subName: "Court",
-    icon: "/images/football.svg",
-    background: "/images/footballBg.png",
+    icon: football,
+    background: footballBg,
   },
   {
     name: "Batminton",
     subName: "Court",
-    icon: "/images/batmin.svg",
-    background: "/images/badmintonImageBg.png",
+    icon: badminton,
+    background: badmintonBg,
   },
   {
     name: "Jogging",
     subName: "Track",
-    icon: "/images/jogging.svg",
-    background: "/images/jogginBg.png",
+    icon: jogging,
+    background: joggingBg,
   },
   {
     name: "Basketball",
     subName: "Court",
-    icon: "/images/basketball.svg",
-    background: "/images/basketballBg.png",
+    icon: basketball,
+    background: basketballBg,
   },
 ];
-
 export default function Home() {
   const [currentGame, setCurrentGame] = useState(0);
 
@@ -80,7 +91,7 @@ export default function Home() {
 <div className="absolute inset-0">
   {games.map((game, index) => (
     <Image
-      key={game.background}
+      key={game.name}
       src={game.background}
       alt={`${game.name} background`}
       fill

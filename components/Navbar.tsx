@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import Logo from "../public/Images/logo.svg"
+import appStore from "../public/Images/appstore.svg"
 
 export default function Navbar() {
   return (
@@ -8,7 +10,7 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="flex items-center gap-2 sm:gap-2.5">
           <Image
-            src="/images/logo.svg"
+            src={Logo}
             alt="TI School Turf"
             width={60}
             height={60}
@@ -25,7 +27,7 @@ export default function Navbar() {
 
         {/* RIGHT */}
         <div className=" flex items-center gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3 ">
-          {/* X */}
+          
           <a
             href="#"
             aria-label="X"
@@ -54,7 +56,7 @@ export default function Navbar() {
             </span>
 
             <Image
-              src="/images/appstore.svg"
+              src={appStore}
               alt="Download app"
               width={40}
               height={26}
