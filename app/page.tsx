@@ -86,8 +86,7 @@ export default function Home() {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      {/* Dynamic Background */}
-     {/* Smooth changing backgrounds */}
+     
 <div className="absolute inset-0">
   {games.map((game, index) => (
     <Image

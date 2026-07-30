@@ -1,54 +1,70 @@
 import Link from "next/link";
-import {
-  FaWhatsapp,
-  FaEnvelope,
-  FaLinkedin,
-} from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className="absolute bottom-0 left-0 z-20 w-full text-white">
-      <div className="w-full px-8 md:px-14 lg:px-16 pb-6 flex items-center justify-between text-[11px]">
+      <div
+        className="
+          w-full
+          px-4 sm:px-6 md:px-10 lg:px-16
+          pb-4 sm:pb-5 lg:pb-6
 
-        {/* Left */}
-        <div className="flex items-center gap-3">
-        
-        </div>
+          flex flex-col
+          lg:flex-row
+          items-center
+          lg:justify-between
 
-        {/* Center */}
-        <p className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
+          gap-3 lg:gap-6
+          text-[9px] sm:text-[10px] md:text-[11px]
+        "
+      >
+        {/* Copyright */}
+        <p className="whitespace-nowrap text-center lg:text-left">
           All Rights Reserved @TITURF 2026
         </p>
 
-<div className="flex items-center gap-6 md:gap-10 whitespace-nowrap">
-  <Link
-    href="/terms-and-conditions"
-    className="hover:underline"
-  >
-    Terms & Conditions
-  </Link>
+        {/* Links */}
+        <div
+          className="
+            flex
+            flex-wrap
+            items-center
+            justify-center
+            lg:justify-end
+            gap-x-4
+            sm:gap-x-6
+            lg:gap-x-8
+            gap-y-2
+          "
+        >
+          <Link
+            href="/terms-and-conditions"
+            className="hover:underline whitespace-nowrap"
+          >
+            Terms &amp; Conditions
+          </Link>
 
-  <Link
-    href="/privacy-policy"
-    className="hover:underline whitespace-nowrap"
-  >
-    Privacy Policy
-  </Link>
+          <Link
+            href="/privacy-policy"
+            className="hover:underline whitespace-nowrap"
+          >
+            Privacy Policy
+          </Link>
 
-  <Link
-    href="/refund-policy"
-    className="hover:underline"
-  >
-    Refund Policy
-  </Link>
-  <Link
-    href="/delete-your-account"
-    className="hover:underline"
-  >
-    Delete your Account
-  </Link>
-</div>
+          <Link
+            href="/refund-policy"
+            className="hover:underline whitespace-nowrap"
+          >
+            Refund Policy
+          </Link>
 
+          <Link
+            href="/delete-your-account"
+            className="hover:underline whitespace-nowrap"
+          >
+            Delete Your Account
+          </Link>
+        </div>
       </div>
     </footer>
   );
