@@ -41,6 +41,12 @@ export default function Footer() {
   >
     Refund Policy
   </Link>
+  <Link
+    href="/delete-your-account"
+    className="hover:underline"
+  >
+    Delete your Account
+  </Link>
 </div>
 
       </div>
