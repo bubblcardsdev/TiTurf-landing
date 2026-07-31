@@ -100,18 +100,19 @@ export default function HeroContent({
       <div
         className=" flex flex-wrap items-center gap-2 sm:gap-2.5 md:gap-3 mt-5 sm:mt-6 md:mt-8 mb-6 sm:mb-7 md:mb-8 lg:mb-10 max-[1400px]:mb-8 [@media(max-height:850px)]:mb-9 [@media(max-height:750px)]:mb-9 ">
         <span
-          className=" border border-white md:border-2 rounded-full px-3 py-1 sm:px-3.5 sm:py-1.5 md:px-4 md:py-1.5 text-[10px] sm:text-[11px] md:text-xs lg:text-sm font-bold whitespace-nowrap ">
+          className=" apple-glass-pill rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs md:text-sm font-semibold whitespace-nowrap "
+        >
           • &nbsp; Easy Slot Booking
         </span>
 
         <span
-          className=" border border-white md:border-2 rounded-full px-3 py-1 sm:px-3.5 sm:py-1.5 md:px-4 md:py-1.5 text-[10px] sm:text-[11px] md:text-xs lg:text-sm font-bold whitespace-nowrap "
+          className=" apple-glass-pill rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs md:text-sm font-semibold whitespace-nowrap "
         >
           • &nbsp; Real-time Availability
         </span>
 
         <span
-          className=" border border-white md:border-2 rounded-full px-3 py-1 sm:px-3.5 sm:py-1.5 md:px-4 md:py-1.5 text-[10px] sm:text-[11px] md:text-xs lg:text-sm font-bold whitespace-nowrap "
+          className=" apple-glass-pill rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs md:text-sm font-semibold whitespace-nowrap "
         >
           • &nbsp; Secure Payments
         </span>
