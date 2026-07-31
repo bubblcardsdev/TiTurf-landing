@@ -86,35 +86,35 @@ export default function Home() {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-     
-<div className="absolute inset-0">
-  {games.map((game, index) => (
-    <Image
-      key={game.name}
-      src={game.background}
-      alt={`${game.name} background`}
-      fill
-      priority
-      className={`
+
+      <div className="absolute inset-0">
+        {games.map((game, index) => (
+          <Image
+            key={game.name}
+            src={game.background}
+            alt={`${game.name} background`}
+            fill
+            priority
+            className={`
         object-cover
         transition-opacity
         duration-1000
         ease-in-out
-        ${
-          currentGame === index
-            ? "opacity-100"
-            : "opacity-0"
-        }
+        ${currentGame === index
+                ? "opacity-100"
+                : "opacity-0"
+              }
       `}
-      style={{
-        transform: isHovering ? "scale(1.06)" : "scale(1)",
-        transformOrigin: `${position.x}% ${position.y}%`,
-        transition:
-          "opacity 1000ms ease-in-out, transform 300ms ease-out",
-      }}
-    />
-  ))}
-</div>
+            style={{
+              transform: isHovering ? "scale(1.06)" : "scale(1)",
+              transformOrigin: `${position.x}% ${position.y}%`,
+              transition:
+                "opacity 1000ms ease-in-out, transform 300ms ease-out",
+            }}
+          />
+        ))}
+        <div className="pointer-events-none absolute inset-0 z-[5] shadow-[inset_0_0_120px_rgba(0,0,0,0.8)] sm:shadow-[inset_0_0_160px_rgba(0,0,0,0.85)]" />
+      </div>
 
       <Navbar />
 
