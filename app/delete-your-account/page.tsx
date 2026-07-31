@@ -6,24 +6,38 @@ export default function DeleteAccountPage() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#171717]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="TiTurf Logo"
-              className="w-auto h-10 md:h-12 object-contain"
-              priority
-            />
-          </Link>
 
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-600 hover:text-black transition"
-          >
-            Back to Home
-          </Link>
-        </div>
+  {/* Logo + TI SCHOOL TURF */}
+  <Link href="/" className="flex items-center gap-3">
+    <Image
+      src={logo}
+      alt="TI School Turf Logo"
+      className="w-auto h-12 md:h-11 object-contain"
+      priority
+    />
+
+    <div className="flex flex-col leading-tight">
+      <span className="text-[15px] md:text-[15px] font-bold text-black">
+        TI SCHOOL
+      </span>
+
+      <span className="text-[15px] md:text-[15px] font-bold text-black">
+        TURF
+      </span>
+    </div>
+  </Link>
+
+  {/* Back */}
+  <Link
+    href="/"
+    className="text-sm font-medium text-gray-600 hover:text-[#1919c7] transition"
+  >
+    ← Back
+  </Link>
+
+</div>
       </header>
 
       {/* Content */}

@@ -12,10 +12,10 @@ import jogging from "../public/Images/jogging.svg";
 import basketball from "../public/Images/basketball.svg";
 
 import cricketBg from "../public/Images/cricketBg.png";
-import footballBg from "../public/Images/footballBg.png";
+import footballBg from "../public/Images/newfootball.png";
 import badmintonBg from "../public/Images/badmintonImageBg.png";
-import joggingBg from "../public/Images/jogginBg.png";
-import basketballBg from "../public/Images/basketballBg.png";
+import joggingBg from "../public/Images/newjog.png";
+import basketballBg from "../public/Images/newbase.png";
 
 
 export const games = [
