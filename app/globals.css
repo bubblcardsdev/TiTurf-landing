@@ -24,3 +24,73 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Apple Liquid Glass Design System - Ultra Clear Refractive Glass with 3D Depth & Splay */
+.apple-liquid-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: 
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -3px 8px 0 rgba(0, 0, 0, 0.12),
+    inset 0 0 15px 0 rgba(0, 0, 0, 0.1),
+    0 8px 16px -4px rgba(0, 0, 0, 0.4),
+    0 30px 65px -12px rgba(0, 0, 0, 0.55),
+    0 0 35px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Subtle Glass Edge Light Rim (no white fog fill) */
+.apple-liquid-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.apple-glass-btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 3px 0 rgba(0, 0, 0, 0.3),
+    0 6px 18px -2px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  isolation: isolate;
+}
+
+.apple-glass-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.8),
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px) scale(1.06);
+}
+
+.apple-glass-btn:active {
+  transform: translateY(0) scale(0.95);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+
+
+
