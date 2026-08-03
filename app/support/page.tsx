@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/Images/logo.svg";
+import Footer from "@/components/Footer";
 import {
   Mail,
   MapPin,
@@ -350,26 +351,7 @@ export default function SupportPage() {
         </section>
       </div>
 
-      {/* Footer Navigation bar */}
-      <footer className="border-t border-gray-200 bg-white py-8 px-5 sm:px-8 text-xs text-gray-500">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 TITURF. All Rights Reserved.</p>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link href="/terms-and-conditions" className="hover:underline">
-              Terms &amp; Conditions
-            </Link>
-            <Link href="/privacy-policy" className="hover:underline">
-              Privacy Policy
-            </Link>
-            <Link href="/refund-policy" className="hover:underline">
-              Refund Policy
-            </Link>
-            <Link href="/delete-your-account" className="hover:underline">
-              Delete Your Account
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer variant="subpage" />
     </main>
   );
 }

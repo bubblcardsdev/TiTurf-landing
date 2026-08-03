@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/Images/logo.svg"
+import logo from "../../public/Images/logo.svg";
+import Footer from "@/components/Footer";
 
 export default function TermsAndConditions() {
   return (
@@ -181,6 +182,8 @@ export default function TermsAndConditions() {
         </section>
 
       </div>
+
+      <Footer variant="subpage" />
     </main>
   );
 }

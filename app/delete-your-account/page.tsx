@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/Images/logo.svg";
+import Footer from "@/components/Footer";
 
 export default function DeleteAccountPage() {
   return (
@@ -230,6 +231,8 @@ export default function DeleteAccountPage() {
           </div>
         </section>
       </div>
+
+      <Footer variant="subpage" />
     </main>
   );
 }
