@@ -37,6 +37,7 @@ export default function Footer() {
             gap-y-2
           "
         >
+
           <Link
             href="/terms-and-conditions"
             className="hover:underline whitespace-nowrap"
@@ -49,6 +50,13 @@ export default function Footer() {
             className="hover:underline whitespace-nowrap"
           >
             Privacy Policy
+          </Link>
+
+          <Link
+            href="/support"
+            className="hover:underline whitespace-nowrap"
+          >
+            Support
           </Link>
 
           <Link
