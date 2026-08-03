@@ -34,7 +34,7 @@ export default function Footer({ variant = "landing", className = "" }: FooterPr
   }
 
   return (
-    <footer className={`absolute bottom-0 left-0 z-20 w-full text-white ${className}`}>
+    <footer className={`relative lg:absolute bottom-0 left-0 z-20 w-full text-white mt-8 pb-6 lg:mt-0 ${className}`}>
       <div
         className="
           w-full
@@ -47,7 +47,7 @@ export default function Footer({ variant = "landing", className = "" }: FooterPr
           lg:justify-between
 
           gap-3 lg:gap-6
-          text-[9px] sm:text-[10px] md:text-[11px]
+          text-[10px] sm:text-[10px] md:text-[11px]
         "
       >
         {/* Copyright */}

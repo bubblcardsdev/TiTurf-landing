@@ -74,14 +74,7 @@ export default function Home() {
 
   return (
     <main
-      className="  relative w-full
-
-    min-h-[100dvh]
-    overflow-x-hidden
-    overflow-y-auto
-
-    lg:h-[100dvh]
-    lg:overflow-hidden"
+      className="relative w-full min-h-[100dvh] overflow-x-hidden overflow-y-auto lg:h-[100dvh] lg:overflow-hidden flex flex-col justify-between"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}

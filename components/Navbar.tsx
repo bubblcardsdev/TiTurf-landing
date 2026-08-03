@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
-import Logo from "../public/Images/logo.svg"
-import appStore from "../public/Images/appstore.svg"
+import Logo from "../public/Images/logo.svg";
+import appStore from "../public/Images/appstore.svg";
 
 export default function Navbar() {
   return (
     <nav className="absolute top-0 left-0 z-20 w-full">
-      <div className=" w-full flex items-center justify-between px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16 lg:py-12 ">
+      <div className=" w-full flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-8 lg:px-16 lg:py-12 ">
         {/* LOGO */}
         <div className="flex items-center gap-2 sm:gap-2.5">
           <Image
@@ -27,7 +27,6 @@ export default function Navbar() {
 
         {/* RIGHT */}
         <div className=" flex items-center gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3 ">
-          
           <a
             href="#"
             aria-label="X"
