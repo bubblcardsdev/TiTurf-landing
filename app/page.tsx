@@ -106,7 +106,7 @@ export default function Home() {
             }}
           />
         ))}
-        <div className="pointer-events-none absolute inset-0 z-[5] shadow-[inset_0_0_120px_rgba(0,0,0,0.8)] sm:shadow-[inset_0_0_160px_rgba(0,0,0,0.85)]" />
+        <div className="pointer-events-none absolute inset-0 z-[5] shadow-[inset_0_0_120px_rgba(0,0,0,0.8)] sm:shadow-[inset_200px_0_360px_rgba(0,0,0,0.85)]" />
       </div>
 
       <Navbar />
