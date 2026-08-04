@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import logo from "@/public/Images/logo.svg";
 import Footer from "@/components/Footer";
+import SubpageHeader from "@/components/SubpageHeader";
 import {
   Mail,
   MapPin,
@@ -15,7 +13,6 @@ import {
   CreditCard,
   ShieldAlert,
   HelpCircle,
-  ArrowLeft,
   Sparkles,
   Copy,
   Check,
@@ -112,35 +109,7 @@ export default function SupportPage() {
 
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#171717]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-xs">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <Image
-              src={logo}
-              alt="TI School Turf Logo"
-              className="w-auto h-11 object-contain transition-transform group-hover:scale-105"
-              priority
-            />
-            <div className="flex flex-col leading-tight">
-              <span className="text-[15px] font-bold text-black tracking-tight">
-                TI SCHOOL
-              </span>
-              <span className="text-[15px] font-bold text-black tracking-tight">
-                TURF
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="/"
-            className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-black transition-colors bg-gray-100 hover:bg-gray-200/80 px-3.5 py-1.5 rounded-full"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
-        </div>
-      </header>
+      <SubpageHeader />
 
       {/* Hero Section */}
       <section className="bg-white border-b border-gray-200 py-12 md:py-16 px-5 sm:px-8">

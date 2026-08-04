@@ -1,45 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import logo from "../../public/Images/logo.svg";
 import Footer from "@/components/Footer";
+import SubpageHeader from "@/components/SubpageHeader";
 
 export default function DeleteAccountPage() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#171717]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-5 flex items-center justify-between">
-
-          {/* Logo + TI SCHOOL TURF */}
-          <Link href="/" className="flex items-center gap-3">
-            <Image
-              src={logo}
-              alt="TI School Turf Logo"
-              className="w-auto h-12 md:h-11 object-contain"
-              priority
-            />
-
-            <div className="flex flex-col leading-tight">
-              <span className="text-[15px] md:text-[15px] font-bold text-black">
-                TI SCHOOL
-              </span>
-
-              <span className="text-[15px] md:text-[15px] font-bold text-black">
-                TURF
-              </span>
-            </div>
-          </Link>
-
-          {/* Back */}
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-600 hover:text-[#1919c7] transition"
-          >
-            ← Back
-          </Link>
-
-        </div>
-      </header>
+      <SubpageHeader />
 
       {/* Content */}
       <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10 md:py-16">
