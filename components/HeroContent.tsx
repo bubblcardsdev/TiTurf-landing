@@ -92,8 +92,8 @@ export default function HeroContent({
         lg:top-[130px] xl:top-[140px]
         max-[1500px]:lg:top-[125px]
         max-[1400px]:lg:top-[115px]
-        [@media(max-height:850px)]:lg:top-[105px]
-        [@media(max-height:750px)]:lg:top-[90px]
+        [@media(max-height:850px)]:lg:top-[130px]
+        [@media(max-height:750px)]:lg:top-[100px]
         text-white
         pb-8 lg:pb-0
       "
