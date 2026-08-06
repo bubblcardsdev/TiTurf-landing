@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "titurf",
+  title: "TI School Turf",
    description: "TiTurf Sports Facility Booking Platform",
 };
 

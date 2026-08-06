@@ -18,6 +18,8 @@ import {
   Check,
   ExternalLink,
 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 interface FAQItem {
   id: string;
@@ -112,8 +114,17 @@ export default function SupportPage() {
       <SubpageHeader />
 
       {/* Hero Section */}
-      <section className="bg-white border-b border-gray-200 py-12 md:py-16 px-5 sm:px-8">
+      <section className="bg-white border-b border-gray-200 py-12 md:py-13 px-5 sm:px-8">
+      
         <div className="max-w-4xl mx-auto text-center">
+           <Link
+          href="/"
+          className="flex items-center lg:pb-6 gap-1.5 text-sm font-medium text-black transition-colors  rounded-full"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
+        
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             Support & Help Center

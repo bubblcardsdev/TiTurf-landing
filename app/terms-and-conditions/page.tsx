@@ -1,14 +1,21 @@
 import Footer from "@/components/Footer";
 import SubpageHeader from "@/components/SubpageHeader";
-
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 export default function TermsAndConditions() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#171717]">
       <SubpageHeader />
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10 md:py-16">
-
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10 md:py-13">
+   <Link
+          href="/"
+          className="flex items-center lg:pb-6 gap-1.5 text-sm font-medium  text-black transition-colors rounded-full"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Home
+        </Link>
         {/* Page Heading */}
         <div className="mb-10 md:mb-14">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500 mb-3">

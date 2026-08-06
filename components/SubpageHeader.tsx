@@ -23,14 +23,6 @@ export default function SubpageHeader() {
             </span>
           </div>
         </Link>
-
-        <Link
-          href="/"
-          className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-black transition-colors bg-gray-100 hover:bg-gray-200/80 px-3.5 py-1.5 rounded-full"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </Link>
       </div>
     </header>
   );

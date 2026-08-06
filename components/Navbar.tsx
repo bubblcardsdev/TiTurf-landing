@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import {  TbWorld  } from "react-icons/tb";
 import Logo from "../public/Images/logo.svg";
 import appStore from "../public/Images/appstore.svg";
 
@@ -28,23 +28,17 @@ export default function Navbar() {
         {/* RIGHT */}
         <div className=" flex items-center gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3 ">
           <a
-            href="#"
-            aria-label="X"
+            href="https://tischool.org/"
+            aria-label="website"
             className=" w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm text-white text-[14px] sm:text-base md:text-xl hover:bg-white/40 transition"
           >
-            <FaXTwitter />
+            {/* <FaYoutube /> */}
+            <TbWorld />
+
           </a>
 
           <a
-            href="#"
-            aria-label="Instagram"
-            className=" w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-white/30 backdrop-blur-sm text-white text-[14px] sm:text-base md:text-xl hover:bg-white/40 transition "
-          >
-            <FaInstagram />
-          </a>
-
-          <a
-            href="https://titurf.in"
+            href="https://play.google.com/store/apps/details?id=com.xpulsar.titurf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit TI Turf"
