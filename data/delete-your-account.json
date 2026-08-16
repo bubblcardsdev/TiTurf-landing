@@ -1,0 +1,69 @@
+{
+  "effectiveDate": "July 30, 2026",
+  "sections": [
+    {
+      "title": "1. Overview",
+      "paragraphs": [
+        "TiTurf allows users to delete their account at any time. This page outlines the account deletion process and our data retention policy."
+      ]
+    },
+    {
+      "title": "2. How to Delete Your Account",
+      "paragraphs": [
+        "You can delete your account directly from the TiTurf app by following these steps:"
+      ],
+      "orderedList": [
+        "Open the TiTurf app.",
+        "Sign in to your account.",
+        "Go to **Profile**.",
+        "Select **Delete my account**.",
+        "Confirm your password to complete the deletion."
+      ],
+      "note": "Alternatively, you can request account deletion by emailing us at [support@titurf.in](mailto:support@titurf.in?subject=Account%20Deletion%20Request) from your registered email address with the subject **\"Account Deletion Request.\"** Your request will be processed within 30 days after verification."
+    },
+    {
+      "title": "3. What Data Is Deleted",
+      "paragraphs": [
+        "When your account is deleted, the following is immediately and permanently removed:"
+      ],
+      "list": [
+        "Your active login sessions on all devices (you're signed out everywhere).",
+        "Your ability to sign back in with that account.",
+        "Device tokens used for push notifications, so you stop receiving them."
+      ]
+    },
+    {
+      "title": "4. What Data May Be Retained",
+      "paragraphs": [
+        "The following information is retained after deletion, since it's needed for accounting, dispute resolution, fraud prevention, and legal/regulatory record-keeping:"
+      ],
+      "list": [
+        "Your profile information (name, email address, phone number).",
+        "Booking history and payment/refund records.",
+        "A security record noting that the account was deleted."
+      ],
+      "afterListParagraphs": [
+        "None of this retained data is visible to you, other members, or facility staff once your account is deleted. It remains under the same access controls as before. Retained data is kept only as long as necessary for these purposes and deleted or anonymized once no longer required by law or legitimate business need."
+      ]
+    },
+    {
+      "title": "5. Processing Time",
+      "stacked": true,
+      "paragraphs": [
+        "Deletion requested in-app takes effect immediately. Your login access is revoked as soon as you confirm.",
+        "Deletion requested by email is completed within **30 days** after successful verification.",
+        "Once processed, the loss of login access is permanent and cannot be undone."
+      ]
+    },
+    {
+      "title": "6. Need Help?",
+      "paragraphs": [
+        "If you have any questions or experience issues deleting your account, please contact us:"
+      ],
+      "contact": {
+        "href": "mailto:titurf2026@gmail.com",
+        "label": "titurf2026@gmail.com"
+      }
+    }
+  ]
+}

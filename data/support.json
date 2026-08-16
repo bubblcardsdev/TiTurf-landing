@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "badge": "Support & Help Center",
+    "title": "Support & Contact",
+    "description": "Have questions about your turf bookings, account verification, or campus facility access? Reach out directly via support email or browse our FAQ guide below."
+  },
+  "emailCard": {
+    "badge": "Direct Email Support",
+    "title": "Get in Touch via Email",
+    "description": "For any support queries, booking assistance, account approvals, or payment issues, send an email to our dedicated support address.",
+    "email": "titurf2026@gmail.com"
+  },
+  "address": {
+    "label": "Campus Location",
+    "lines": [
+      "No. 2, Madras Thiruvallur High Rd,",
+      "Tiruvenkadam Nagar, Ambattur,",
+      "Chennai, Tamil Nadu 600053"
+    ]
+  },
+  "hours": {
+    "label": "Support Hours",
+    "days": "Monday – Saturday",
+    "time": "6:00 AM – 9:00 PM (IST)",
+    "response": "Response time: Within 24 hours"
+  },
+  "categories": [
+    { "name": "All Topics", "icon": "HelpCircle" },
+    { "name": "Turf Bookings", "icon": "Calendar" },
+    { "name": "Account Approval", "icon": "UserCheck" },
+    { "name": "Payments & Refunds", "icon": "CreditCard" },
+    { "name": "Rules & Safety", "icon": "ShieldAlert" }
+  ],
+  "faqs": [
+    {
+      "id": "booking-process",
+      "category": "Turf Bookings",
+      "question": "How do I book a sports slot on TiTurf?",
+      "answer": "Open the TiTurf mobile app, select your desired sport (Cricket, Football, Badminton, Jogging, or Basketball), choose an available time slot on the calendar, and confirm your booking. Once confirmed, you will receive an instant digital booking pass in the app."
+    },
+    {
+      "id": "account-approval",
+      "category": "Account Approval",
+      "question": "Why is my account status pending approval?",
+      "answer": "Because TiTurf facilities are restricted to verified members of our campus compound, every new registration is reviewed by administration for safety. Account approval typically takes between 1 to 12 hours."
+    },
+    {
+      "id": "cancellation-refund",
+      "category": "Payments & Refunds",
+      "question": "What is the cancellation and refund policy for turf bookings?",
+      "answer": "Bookings can be cancelled through the app up to 4 hours before your scheduled slot. Approved refunds are processed back to your original payment method within 5–7 business days. Please refer to our Refund Policy page for complete terms."
+    },
+    {
+      "id": "eligibility",
+      "category": "Account Approval",
+      "question": "Who is eligible to register and use TiTurf facilities?",
+      "answer": "Access is designated for students, staff, and authorized residents of the educational institution compound. Account registration requires valid identity and residential verification."
+    },
+    {
+      "id": "payment-failed",
+      "category": "Payments & Refunds",
+      "question": "What should I do if a payment failed but the amount was deducted?",
+      "answer": "Bank gateway deductions for unconfirmed bookings are usually reversed automatically by your bank within 24–48 hours. If the booking was not confirmed and the amount isn't refunded after 48 hours, send an email to support@bubbl.cards with your transaction details."
+    },
+    {
+      "id": "delete-account",
+      "category": "Account Approval",
+      "question": "How do I request account deletion or data removal?",
+      "answer": "You can submit an account deletion request directly through our dedicated 'Delete Your Account' page or send an email to support@bubbl.cards using your registered phone number or email address."
+    },
+    {
+      "id": "compound-rules",
+      "category": "Rules & Safety",
+      "question": "What rules must I follow at the sports facilities?",
+      "answer": "All players must wear appropriate athletic footwear (non-marking shoes for indoor courts), strictly adhere to reserved time slots, and respect campus safety guidelines. Food and non-water beverages are prohibited on courts."
+    }
+  ]
+}

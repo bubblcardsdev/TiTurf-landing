@@ -17,78 +17,24 @@ import {
   Copy,
   Check,
   ExternalLink,
+  type LucideIcon,
 } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import supportContent from "@/data/support.json";
 
-interface FAQItem {
-  id: string;
-  category: string;
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQItem[] = [
-  {
-    id: "booking-process",
-    category: "Turf Bookings",
-    question: "How do I book a sports slot on TiTurf?",
-    answer:
-      "Open the TiTurf mobile app, select your desired sport (Cricket, Football, Badminton, Jogging, or Basketball), choose an available time slot on the calendar, and confirm your booking. Once confirmed, you will receive an instant digital booking pass in the app.",
-  },
-  {
-    id: "account-approval",
-    category: "Account Approval",
-    question: "Why is my account status pending approval?",
-    answer:
-      "Because TiTurf facilities are restricted to verified members of our campus compound, every new registration is reviewed by administration for safety. Account approval typically takes between 1 to 12 hours.",
-  },
-  {
-    id: "cancellation-refund",
-    category: "Payments & Refunds",
-    question: "What is the cancellation and refund policy for turf bookings?",
-    answer:
-      "Bookings can be cancelled through the app up to 4 hours before your scheduled slot. Approved refunds are processed back to your original payment method within 5–7 business days. Please refer to our Refund Policy page for complete terms.",
-  },
-  {
-    id: "eligibility",
-    category: "Account Approval",
-    question: "Who is eligible to register and use TiTurf facilities?",
-    answer:
-      "Access is designated for students, staff, and authorized residents of the educational institution compound. Account registration requires valid identity and residential verification.",
-  },
-  {
-    id: "payment-failed",
-    category: "Payments & Refunds",
-    question: "What should I do if a payment failed but the amount was deducted?",
-    answer:
-      "Bank gateway deductions for unconfirmed bookings are usually reversed automatically by your bank within 24–48 hours. If the booking was not confirmed and the amount isn't refunded after 48 hours, send an email to support@bubbl.cards with your transaction details.",
-  },
-  {
-    id: "delete-account",
-    category: "Account Approval",
-    question: "How do I request account deletion or data removal?",
-    answer:
-      "You can submit an account deletion request directly through our dedicated 'Delete Your Account' page or send an email to support@bubbl.cards using your registered phone number or email address.",
-  },
-  {
-    id: "compound-rules",
-    category: "Rules & Safety",
-    question: "What rules must I follow at the sports facilities?",
-    answer:
-      "All players must wear appropriate athletic footwear (non-marking shoes for indoor courts), strictly adhere to reserved time slots, and respect campus safety guidelines. Food and non-water beverages are prohibited on courts.",
-  },
-];
-
-const categories = [
-  { name: "All Topics", icon: HelpCircle },
-  { name: "Turf Bookings", icon: Calendar },
-  { name: "Account Approval", icon: UserCheck },
-  { name: "Payments & Refunds", icon: CreditCard },
-  { name: "Rules & Safety", icon: ShieldAlert },
-];
+const categoryIcons: Record<string, LucideIcon> = {
+  HelpCircle,
+  Calendar,
+  UserCheck,
+  CreditCard,
+  ShieldAlert,
+};
 
 export default function SupportPage() {
+  const { hero, emailCard, address, hours, categories, faqs } =
+    supportContent;
+
   const [selectedCategory, setSelectedCategory] = useState("All Topics");
   const [openFaq, setOpenFaq] = useState<string | null>("booking-process");
   const [copied, setCopied] = useState(false);
@@ -98,7 +44,7 @@ export default function SupportPage() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("support@bubbl.cards");
+    navigator.clipboard.writeText(emailCard.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -115,7 +61,7 @@ export default function SupportPage() {
 
       {/* Hero Section */}
       <section className="bg-white border-b border-gray-200 py-12 md:py-13 px-5 sm:px-8">
-      
+
         <div className="max-w-4xl mx-auto text-center">
            <Link
           href="/"
@@ -124,18 +70,18 @@ export default function SupportPage() {
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
-        
+
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            Support & Help Center
+            {hero.badge}
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
-            Support & Contact
+            {hero.title}
           </h1>
 
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Have questions about your turf bookings, account verification, or campus facility access? Reach out directly via support email or browse our FAQ guide below.
+            {hero.description}
           </p>
         </div>
       </section>
@@ -148,13 +94,13 @@ export default function SupportPage() {
             <div className="space-y-2 max-w-xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-gray-100 text-gray-700 text-xs font-semibold uppercase tracking-wider">
                 <Mail className="w-3.5 h-3.5" />
-                Direct Email Support
+                {emailCard.badge}
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                Get in Touch via Email
+                {emailCard.title}
               </h2>
               <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                For any support queries, booking assistance, account approvals, or payment issues, send an email to our dedicated support address.
+                {emailCard.description}
               </p>
             </div>
 
@@ -163,16 +109,16 @@ export default function SupportPage() {
                 Support Email
               </span>
               <a
-                href="mailto:support@bubbl.cards"
+                href={`mailto:${emailCard.email}`}
                 className="text-lg sm:text-xl font-bold text-black hover:underline flex items-center gap-2"
               >
-                support@bubbl.cards
+                {emailCard.email}
                 <ExternalLink className="w-4 h-4 text-gray-400" />
               </a>
 
               <div className="flex items-center gap-2 pt-2 border-t border-gray-200">
                 <a
-                  href="mailto:support@bubbl.cards"
+                  href={`mailto:${emailCard.email}`}
                   className="flex-1 py-2.5 px-4 bg-black hover:bg-gray-800 text-white font-semibold text-xs rounded-xl transition text-center"
                 >
                   Send Email
@@ -203,14 +149,15 @@ export default function SupportPage() {
             </div>
             <div>
               <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
-                Campus Location
+                {address.label}
               </p>
               <p className="text-sm font-semibold text-gray-900 leading-relaxed">
-                No. 1 & 2, Madras Thiruvallur High Rd,
-                <br />
-                Tiruvenkadam Nagar, Ambattur,
-                <br />
-                Chennai, Tamil Nadu 600053
+                {address.lines.map((line, index) => (
+                  <span key={index}>
+                    {index > 0 && <br />}
+                    {line}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
@@ -222,17 +169,13 @@ export default function SupportPage() {
             </div>
             <div>
               <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1">
-                Support Hours
+                {hours.label}
               </p>
               <p className="text-sm font-semibold text-gray-900">
-                Monday – Saturday
+                {hours.days}
               </p>
-              <p className="text-xs text-gray-600 mt-1">
-                6:00 AM – 9:00 PM (IST)
-              </p>
-              <p className="text-xs text-gray-400 mt-2">
-                Response time: Within 24 hours
-              </p>
+              <p className="text-xs text-gray-600 mt-1">{hours.time}</p>
+              <p className="text-xs text-gray-400 mt-2">{hours.response}</p>
             </div>
           </div>
         </div>
@@ -253,7 +196,7 @@ export default function SupportPage() {
             {/* Category Filter Pills */}
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => {
-                const Icon = cat.icon;
+                const Icon = categoryIcons[cat.icon];
                 const isActive = selectedCategory === cat.name;
                 return (
                   <button

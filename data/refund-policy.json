@@ -1,0 +1,47 @@
+{
+  "effectiveDate": "July 30, 2026",
+  "sections": [
+    {
+      "title": "1. Payment & Booking Fees",
+      "paragraphs": [
+        "Where facility usage or booking fees apply, all payments made through the app must be completed using designated and approved payment gateways. If a facility is offered free of charge, monetary refunds will not apply, but slot cancellation rules still govern user account standing."
+      ]
+    },
+    {
+      "title": "2. User-Initiated Cancellations",
+      "paragraphs": [
+        "Refund or credit eligibility depends on when the booking is cancelled relative to the scheduled slot start time."
+      ],
+      "table": {
+        "headers": ["Cancellation Window", "Refund / Credit Eligibility"],
+        "rows": [
+          [
+            "24 Hours or more prior to slot start time",
+            "100% Refund or full slot credit"
+          ],
+          [
+            "Less than 24 Hours prior to slot start time",
+            "No Refund / Cancellation not allowed"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "3. Facility-Initiated Cancellations",
+      "paragraphs": [
+        "If a booking is canceled by the institution or app administration due to unforeseen circumstances (such as emergency facility repairs, severe weather conditions, or mandatory official campus events):"
+      ],
+      "list": [
+        "A 100% refund or immediate slot reschedule option will be provided automatically to the affected user."
+      ]
+    },
+    {
+      "title": "4. Refund Processing Time",
+      "stacked": true,
+      "paragraphs": [
+        "Approved monetary refunds will be processed within **7 to 10 business days** back to the original method of payment used during booking.",
+        "Internal app credits (if applicable) will be reflected immediately in your app profile."
+      ]
+    }
+  ]
+}

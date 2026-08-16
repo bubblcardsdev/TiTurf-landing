@@ -2,12 +2,14 @@ import Footer from "@/components/Footer";
 import SubpageHeader from "@/components/SubpageHeader";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import refundContent from "@/data/refund-policy.json";
+import { renderRichText } from "@/lib/richText";
 
 export default function RefundPolicy() {
   return (
     <main className="min-h-screen bg-[#f7f7f5] text-[#171717]">
       <SubpageHeader />
-       
+
 
       {/* Content */}
       <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10 md:py-13">
@@ -33,121 +35,98 @@ export default function RefundPolicy() {
               <span className="font-semibold text-gray-700">
                 Effective Date:
               </span>{" "}
-              July 30, 2026
+              {refundContent.effectiveDate}
             </p>
           </div>
         </div>
 
-        {/* Section 1 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            1. Payment &amp; Booking Fees
-          </h2>
+        {refundContent.sections.map((section, index) => {
+          const isLast = index === refundContent.sections.length - 1;
 
-          <p className="text-gray-600 leading-7">
-            Where facility usage or booking fees apply, all payments made
-            through the app must be completed using designated and approved
-            payment gateways. If a facility is offered free of charge,
-            monetary refunds will not apply, but slot cancellation rules still
-            govern user account standing.
-          </p>
-        </section>
+          return (
+            <section
+              key={section.title}
+              className={isLast ? "mb-8" : "mb-12"}
+            >
+              <h2 className="text-xl md:text-2xl font-bold mb-4">
+                {section.title}
+              </h2>
 
-        {/* Section 2 */}
-<section className="mb-12">
-  <h2 className="text-xl md:text-2xl font-bold mb-4">
-    2. User-Initiated Cancellations
-  </h2>
+              {section.stacked ? (
+                <div className="space-y-4 text-gray-600 leading-7">
+                  {section.paragraphs?.map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex}>{renderRichText(paragraph)}</p>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  {section.paragraphs?.map((paragraph, paragraphIndex) => {
+                    const spacingClass = section.table
+                      ? "mb-6"
+                      : section.list
+                      ? "mb-5"
+                      : "";
 
-  <p className="text-gray-600 leading-7 mb-6">
-    Refund or credit eligibility depends on when the booking is cancelled
-    relative to the scheduled slot start time.
-  </p>
+                    return (
+                      <p
+                        key={paragraphIndex}
+                        className={`text-gray-600 leading-7 ${spacingClass}`}
+                      >
+                        {renderRichText(paragraph)}
+                      </p>
+                    );
+                  })}
 
- <div className="overflow-x-auto">
-  <table className="w-full border-collapse border border-gray-400 text-left">
-    
-    <thead>
-      <tr className="bg-gray-200">
-        <td className="w-1/2 border border-gray-400 px-5 py-4 text-gray-900">
-          Cancellation Window
-        </td>
+                  {section.list && (
+                    <ul className="list-disc pl-6 text-gray-600 leading-7">
+                      {section.list.map((item, itemIndex) => (
+                        <li key={itemIndex}>{renderRichText(item)}</li>
+                      ))}
+                    </ul>
+                  )}
 
-        <td className="w-1/2 border border-gray-400 px-5 py-4 text-gray-700">
-          Refund / Credit Eligibility
-        </td>
-      </tr>
-    </thead>
+                  {section.table && (
+                    <div className="overflow-x-auto">
+                      <table className="w-full border-collapse border border-gray-400 text-left">
+                        <thead>
+                          <tr className="bg-gray-200">
+                            {section.table.headers.map((header, headerIndex) => (
+                              <td
+                                key={headerIndex}
+                                className={`w-1/2 border border-gray-400 px-5 py-4 ${
+                                  headerIndex === 0
+                                    ? "text-gray-900"
+                                    : "text-gray-700"
+                                }`}
+                              >
+                                {header}
+                              </td>
+                            ))}
+                          </tr>
+                        </thead>
 
-    <tbody>
-      <tr>
-        <td className="border border-gray-400 px-5 py-4 text-gray-700">
-          24 Hours or more prior to slot start time
-        </td>
-
-        <td className="border border-gray-400 px-5 py-4 text-gray-700">
-          100% Refund or full slot credit
-        </td>
-      </tr>
-
-      <tr>
-        <td className="border border-gray-400 px-5 py-4 text-gray-700">
-          Less than 24 Hours prior to slot start time
-        </td>
-
-        <td className="border border-gray-400 px-5 py-4 text-gray-700">
-          No Refund / Cancellation not allowed
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-</div>
-</section>
-
-        {/* Section 3 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            3. Facility-Initiated Cancellations
-          </h2>
-
-          <p className="text-gray-600 leading-7 mb-5">
-            If a booking is canceled by the institution or app administration
-            due to unforeseen circumstances (such as emergency facility
-            repairs, severe weather conditions, or mandatory official campus
-            events):
-          </p>
-
-          <ul className="list-disc pl-6 text-gray-600 leading-7">
-            <li>
-              A 100% refund or immediate slot reschedule option will be
-              provided automatically to the affected user.
-            </li>
-          </ul>
-        </section>
-
-        {/* Section 4 */}
-        <section className="mb-8">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            4. Refund Processing Time
-          </h2>
-
-          <div className="space-y-4 text-gray-600 leading-7">
-            <p>
-              Approved monetary refunds will be processed within{" "}
-              <span className="font-semibold text-gray-800">
-                7 to 10 business days
-              </span>{" "}
-              back to the original method of payment used during booking.
-            </p>
-
-            <p>
-              Internal app credits (if applicable) will be reflected
-              immediately in your app profile.
-            </p>
-          </div>
-        </section>
-
+                        <tbody>
+                          {section.table.rows.map((row, rowIndex) => (
+                            <tr key={rowIndex}>
+                              {row.map((cell, cellIndex) => (
+                                <td
+                                  key={cellIndex}
+                                  className="border border-gray-400 px-5 py-4 text-gray-700"
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </>
+              )}
+            </section>
+          );
+        })}
       </div>
 
       <Footer variant="subpage" />
