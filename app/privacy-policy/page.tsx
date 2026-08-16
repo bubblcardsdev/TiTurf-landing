@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import SubpageHeader from "@/components/SubpageHeader";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import privacyContent from "@/data/privacy-policy.json";
 
 export default function PrivacyPolicy() {
   return (
@@ -32,14 +33,14 @@ export default function PrivacyPolicy() {
               <span className="font-semibold text-gray-700">
                 Effective Date:
               </span>{" "}
-              July 30, 2026
+              {privacyContent.effectiveDate}
             </p>
 
             <p>
               <span className="font-semibold text-gray-700">
                 Last Updated:
               </span>{" "}
-              July 30, 2026
+              {privacyContent.lastUpdated}
             </p>
           </div>
         </div>
@@ -47,195 +48,92 @@ export default function PrivacyPolicy() {
         {/* Introduction */}
         <div className="mb-12">
           <p className="text-base md:text-lg text-gray-600 leading-8">
-            Welcome to our sports facility booking platform. We are committed
-            to protecting your personal data and respecting your privacy. This
-            Privacy Policy explains how we collect, use, disclose, and safeguard
-            your information when you use our mobile application and website.
+            {privacyContent.intro}
           </p>
         </div>
 
-        {/* Section 1 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            1. Information We Collect
-          </h2>
+        {privacyContent.sections.map((section, index) => (
+          <section
+            key={section.title}
+            className={
+              index === privacyContent.sections.length - 1 ? "mb-8" : "mb-12"
+            }
+          >
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {section.title}
+            </h2>
 
-          <p className="text-gray-600 leading-7 mb-6">
-            Because access is restricted to approved members of our educational
-            institution compound, we collect specific details to verify your
-            identity and manage bookings:
-          </p>
+            {section.paragraphs?.map((paragraph, paragraphIndex) => {
+              const spacingClass = section.list
+                ? "mb-5"
+                : section.subsections || section.contact
+                ? "mb-6"
+                : "";
 
-          <div className="space-y-5 pl-1">
-            <div>
-              <h3 className="font-semibold mb-1">
-                Personal Identification Information
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Name, email address, phone number, and residential address.
-              </p>
-            </div>
+              return (
+                <p
+                  key={paragraphIndex}
+                  className={`text-gray-600 leading-7 ${spacingClass}`}
+                >
+                  {paragraph}
+                </p>
+              );
+            })}
 
-            <div>
-              <h3 className="font-semibold mb-1">
-                Approval &amp; Access Data
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Profile status, and approval logs.
-              </p>
-            </div>
+            {section.list && (
+              <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-7">
+                {section.list.map((item, itemIndex) => (
+                  <li key={itemIndex}>{item}</li>
+                ))}
+              </ul>
+            )}
 
-            <div>
-              <h3 className="font-semibold mb-1">
-                Usage &amp; Booking Data
-              </h3>
-              <p className="text-gray-600 leading-7">
-                Sports facility reserved, date/time slots, booking history, and
-                check-in status.
-              </p>
-            </div>
+            {section.subsections && (
+              <div className="space-y-5 pl-1">
+                {section.subsections.map((subsection) => (
+                  <div key={subsection.title}>
+                    <h3 className="font-semibold mb-1">{subsection.title}</h3>
+                    <p className="text-gray-600 leading-7">
+                      {subsection.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
 
-            <div>
-              <h3 className="font-semibold mb-1">
-                Device &amp; Technical Data
-              </h3>
-              <p className="text-gray-600 leading-7">
-                IP address, device ID, app usage statistics, and operating
-                system version.
-              </p>
-            </div>
-          </div>
-        </section>
+            {section.contact && (
+              <div className="border border-gray-200 rounded-2xl p-5 md:p-7">
+                <div className="mb-4">
+                  <p className="text-sm text-gray-500 mb-1">Email</p>
 
-        {/* Section 2 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            2. How We Use Your Information
-          </h2>
+                  <a
+                    href={`mailto:${section.contact.email}`}
+                    className="font-semibold hover:underline"
+                  >
+                    {section.contact.email}
+                  </a>
+                </div>
 
-          <p className="text-gray-600 leading-7 mb-5">
-            We use the collected information for the following core operational
-            purposes:
-          </p>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Address</p>
 
-          <ul className="list-disc pl-6 space-y-3 text-gray-600 leading-7">
-            <li>To verify your address and grant access to the app.</li>
-
-            <li>
-              To process, confirm, and manage your facility bookings.
-            </li>
-
-            <li>
-              To enforce compound safety, discipline, and facility usage
-              guidelines.
-            </li>
-
-            <li>
-              To send booking confirmations, updates, or administrative alerts
-              via SMS, Email, or In-App notifications.
-            </li>
-          </ul>
-        </section>
-
-        {/* Section 3 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            3. Data Sharing and Disclosure
-          </h2>
-
-          <p className="text-gray-600 leading-7 mb-6">
-            We do not sell, rent, or trade your personal information. We may
-            share data only under the following conditions:
-          </p>
-
-          <div className="space-y-5">
-            <div>
-              <h3 className="font-semibold mb-1">
-                Institutional Authorities
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Booking records and user details may be shared with campus
-                security or administration for safety, maintenance, or
-                disciplinary compliance.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-1">
-                Service Providers
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                Third-party vendors (e.g., cloud hosting or SMS gateway
-                providers) who assist in running the platform under strict
-                confidentiality agreements.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-1">
-                Legal Compliance
-              </h3>
-
-              <p className="text-gray-600 leading-7">
-                When required by applicable Indian laws or legal proceedings.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4 */}
-        <section className="mb-12">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            4. Data Security &amp; Retention
-          </h2>
-
-          <p className="text-gray-600 leading-7">
-            We implement standard technical and organizational security
-            measures to protect your data from unauthorized access or breach.
-            We retain your personal data for as long as you maintain an active
-            approved account with the institution.
-          </p>
-        </section>
-
-        {/* Section 5 */}
-        <section className="mb-8">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">
-            5. Contact Us
-          </h2>
-
-          <p className="text-gray-600 leading-7 mb-6">
-            For any privacy-related queries or requests regarding your personal
-            information, please contact the System Administrator at:
-          </p>
-
-          {/* Contact Box */}
-          <div className=" border border-gray-200 rounded-2xl p-5 md:p-7">
-            <div className="mb-4">
-              <p className="text-sm text-gray-500 mb-1">Email</p>
-
-              <a
-                href="mailto:support@bubbl.cards"
-                className="font-semibold hover:underline"
-              >
-                support@bubbl.cards
-              </a>
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-500 mb-1">Address</p>
-
-              <p className="font-medium leading-7">
-                No. 1&amp; 2, Madras Thiruvallur High Rd,
-                <br className="hidden sm:block" />
-                {" "}Tiruvenkadam Nagar, Ambattur,
-                <br className="hidden sm:block" />
-                {" "}Chennai, Tamil Nadu 600053
-              </p>
-            </div>
-          </div>
-        </section>
+                  <p className="font-medium leading-7">
+                    {section.contact.addressLines.map((line, lineIndex) => (
+                      <span key={lineIndex}>
+                        {lineIndex > 0 && (
+                          <>
+                            <br className="hidden sm:block" />{" "}
+                          </>
+                        )}
+                        {line}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            )}
+          </section>
+        ))}
       </div>
 
       <Footer variant="subpage" />

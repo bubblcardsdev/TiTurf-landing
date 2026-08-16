@@ -1,0 +1,83 @@
+{
+  "effectiveDate": "July 30, 2026",
+  "lastUpdated": "July 30, 2026",
+  "intro": "Welcome to our sports facility booking platform. We are committed to protecting your personal data and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website.",
+  "sections": [
+    {
+      "title": "1. Information We Collect",
+      "paragraphs": [
+        "Because access is restricted to approved members of our educational institution compound, we collect specific details to verify your identity and manage bookings:"
+      ],
+      "subsections": [
+        {
+          "title": "Personal Identification Information",
+          "text": "Name, email address, phone number, and residential address."
+        },
+        {
+          "title": "Approval & Access Data",
+          "text": "Profile status, and approval logs."
+        },
+        {
+          "title": "Usage & Booking Data",
+          "text": "Sports facility reserved, date/time slots, booking history, and check-in status."
+        },
+        {
+          "title": "Device & Technical Data",
+          "text": "IP address, device ID, app usage statistics, and operating system version."
+        }
+      ]
+    },
+    {
+      "title": "2. How We Use Your Information",
+      "paragraphs": [
+        "We use the collected information for the following core operational purposes:"
+      ],
+      "list": [
+        "To verify your address and grant access to the app.",
+        "To process, confirm, and manage your facility bookings.",
+        "To enforce compound safety, discipline, and facility usage guidelines.",
+        "To send booking confirmations, updates, or administrative alerts via SMS, Email, or In-App notifications."
+      ]
+    },
+    {
+      "title": "3. Data Sharing and Disclosure",
+      "paragraphs": [
+        "We do not share your personal information. We may share data only under the following conditions:"
+      ],
+      "subsections": [
+        {
+          "title": "Institutional Authorities",
+          "text": "Booking records and user details may be shared with campus security or administration for safety, maintenance, or disciplinary compliance."
+        },
+        {
+          "title": "Service Providers",
+          "text": "Third-party vendors (e.g., cloud hosting or SMS gateway providers) who assist in running the platform under strict confidentiality agreements."
+        },
+        {
+          "title": "Legal Compliance",
+          "text": "When required by applicable Indian laws or legal proceedings."
+        }
+      ]
+    },
+    {
+      "title": "4. Data Security & Retention",
+      "paragraphs": [
+        "We implement standard technical and organizational security measures to protect your data from unauthorized access or breach. We retain your personal data for as long as you maintain an active approved account with the institution."
+      ]
+    },
+    {
+      "title": "5. Contact Us",
+      "paragraphs": [
+        "For any privacy-related queries or requests regarding your personal information, please contact the System Administrator at:"
+      ],
+      "contact": {
+        "email": "titurf@gmail.com",
+        "addressLines": [
+          "No. 2, Madras Thiruvallur High Rd,",
+          "Tiruvenkadam Nagar, Ambattur,",
+          "Chennai, Tamil Nadu 600053"
+        ]
+      }
+    }
+  ]
+}
