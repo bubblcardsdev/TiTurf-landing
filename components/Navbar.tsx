@@ -1,9 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import {  TbWorld  } from "react-icons/tb";
 import Logo from "../public/Images/logo.svg";
 import appStore from "../public/Images/appstore.svg";
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.xpulsar.titurf";
+const APP_STORE_URL = "https://apps.apple.com/in/app/ti-turf/id6796342251";
+
+function isApple() {
+  const ua = navigator.userAgent;
+  // iPadOS 13+ reports itself as a Mac, so also check for touch support
+  return (
+    /iPhone|iPad|iPod/i.test(ua) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
 export default function Navbar() {
+  const [storeUrl, setStoreUrl] = useState(PLAY_STORE_URL);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (isApple()) setStoreUrl(APP_STORE_URL);
+  }, []);
+
   return (
     <nav className="absolute top-0 left-0 z-20 w-full">
       <div className=" w-full flex items-center justify-between px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-8 lg:px-16 lg:py-12 ">
@@ -38,7 +61,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://play.google.com/store/apps/details?id=com.xpulsar.titurf"
+            href={storeUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit TI Turf"

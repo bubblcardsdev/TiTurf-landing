@@ -11,11 +11,11 @@ import badminton from "../public/Images/batmin.svg";
 import jogging from "../public/Images/jogging.svg";
 import basketball from "../public/Images/basketball.svg";
 
-import cricketBg from "../public/Images/cricketBg.png";
-import footballBg from "../public/Images/newfootball.png";
-import badmintonBg from "../public/Images/badmintonImageBg.png";
-import joggingBg from "../public/Images/newjog.png";
-import basketballBg from "../public/Images/newbase.png";
+import cricketBg from "../public/Images/cricket ground.png";
+import footballBg from "../public/Images/footballgroundImage.png";
+import badmintonBg from "../public/Images/badminton ground.png";
+import joggingBg from "../public/Images/jogging ground.png";
+import basketballBg from "../public/Images/basketballground.png";
 
 
 export const games = [
